@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--configuration核心配置文件-->
+<mapper namespace="com.kuang.dao.UserMapper">
+<!--    开启二级缓存-->
+<!--    这个更高级的配置创建了一个 FIFO 缓存，每隔 60 秒刷新，最多可以存储结果对象或列表的
+512 个引用，而且返回的对象被认为是只读的，因此对它们进行修改可能会在不同线程中的调用者产生冲突。-->
+<!--    type自定义缓存为ehcache-->
+    <cache eviction="FIFO" flushInterval="60000" size="512" readOnly="true" type="org.mybatis.caches.ehcache.EhcacheCache"/>
+
+
+    <select id="queryUserById" resultType="User" useCache="true">
+        select * from user where id=#{id}
+    </select>
+
+    <update id="updateUser" parameterType="User">
+        update user set name=#{name}, pwd=#{pwd} where id=#{id}
+    </update>
+</mapper>

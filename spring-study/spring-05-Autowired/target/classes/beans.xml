@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="cat" class="com.kuang.pojo.Cat"/>
+    <bean id="dog1" class="com.kuang.pojo.Dog"/>
+    <!--<bean id="people" class="com.kuang.pojo.People">
+        <property name="cat" ref="cat"/>
+        <property name="dog" ref="dog"/>
+        <property name="name" value="小明"/>
+    </bean>-->
+    <!--与上面注视掉的做对比。自动装配测试，不用再手动配置cat和dog，spring会自动搜索后装配上-->
+    <!--
+      byName:会自动找和自己对象set方法后面的字符串相等beanid: 如setDog() 就会找bean id=dog的bean
+      byType:会自动找自己对象属性类型相同的bean：不能同class的配置两个bean
+    -->
+    <bean id="people" class="com.kuang.pojo.People" autowire="byType">
+        <property name="name" value="小明"/>
+    </bean>
+
+</beans>

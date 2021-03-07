@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuang.dao.BlogMapper">
+    <insert id="addBlog" parameterType="Blog">
+        insert into blog(id,title,author,create_time,views) values(#{id},#{title},#{author},#{createTime},#{views})
+    </insert>
+
+<!--    动态查询例子，IF-->
+    <select id="queryBlogIF" parameterType="Map" resultType="Blog">
+        select * from blog
+        <where>
+            <if test="title != null">
+                title=#{title}
+            </if>
+            <if test="author != null">
+                and author=#{author}
+            </if>
+        </where>
+    </select>
+
+    <select id="queryBlogChoose" parameterType="Map" resultType="Blog">
+        select * from blog
+        <where>
+            <choose>
+                <when test="title!=null">
+                    title=#{title}
+                </when>
+                <when test="author">
+                    author=#{author}
+                </when>
+                <otherwise>
+                    views=#{views}
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+
+    <update id="updateBlog" parameterType="Map">
+        update blog
+        <set>
+            <if test="title!=null">title=#{title},</if>
+            <if test="author!=null">author=#{author},</if>
+        </set>
+        where id=#{id}
+    </update>
+
+<!--    sql片段-->
+    <sql id="title-author">
+        <if test="title != null">
+            title=#{title}
+        </if>
+        <if test="author != null">
+            and author=#{author}
+        </if>
+    </sql>
+    <select id="queryBlogIF1" parameterType="Map" resultType="Blog">
+        select * from blog
+        <where>
+            <include refid="title-author"></include>
+        </where>
+    </select>
+
+<!--    foreach-->
+<!--    原始sql   select * from blog where 1=1 and (id=1 or id=2 or id=3)-->
+    <select id="queryBlogForeach" parameterType="Map" resultType="Blog">
+        select * from blog
+        <where>
+            <foreach item="id" collection="ids" open="and (" separator="or" close=")">
+                id=#{id}
+            </foreach>
+        </where>
+    </select>
+</mapper>

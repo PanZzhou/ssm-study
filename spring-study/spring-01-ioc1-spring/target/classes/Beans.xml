@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userDaoMysql" class="com.kuang.dao.UserDaoMysqlImpl"/>
+    <bean id="userDaoOracle" class="com.kuang.dao.UserDaoOracleImpl"/>
+
+    <!-- 通过改变下面的ref后的id值，就可以动态的向程序注入不同的对象，而不需要改动程序 -->
+    <bean id="userService" class="com.kuang.service.UserServiceImpl">
+        <property name="userDao" ref="userDaoOracle"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--p命名空间使用测试 properties, 可以直接注入属性的值-->
+    <bean id="user" class="com.kuang.pojo.User" p:age="18" p:name="小明"/>
+    <!--下面的配置和上面的配置是一个意思，只是上面这个比较简化-->
+    <bean id="user1" class="com.kuang.pojo.User">
+        <property name="name" value="小明"/>
+        <property name="age" value="19"/>
+    </bean>
+
+    <!--c命名空间使用测试 contructor_arg,有参的构造器-->
+    <bean id="userc" class="com.kuang.pojo.User" c:name="小明" c:age="18"/>
+
+    <!--bean标签scope测试，单例，整个系统只有一个实例-->
+    <bean id="user2" class="com.kuang.pojo.User" scope="prototype">
+        <property name="name" value="小明"/>
+        <property name="age" value="19"/>
+    </bean>
+</beans>

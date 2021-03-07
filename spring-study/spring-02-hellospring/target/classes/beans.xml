@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- more bean definitions go here -->
+    <!--
+       value:具体的数值，基本数据类型
+       ref：引用，引用spring容器创建好的对象。
+    -->
+    <bean id = "hello" class="com.kuang.pojo.Hello">
+        <property name="str" value="Spring"/>
+    </bean>
+
+    <!--使用property给有参构造会报错，得使用 constructor-arg 来-->
+    <!--有参构造第一种方式：-->
+    <bean id = "hello_arg" class="com.kuang.pojo.Hello_arg">
+        <constructor-arg index="0" value="Spring_arg"/> <!-- index="0" 表示第一个属性-->
+    </bean>
+    <!--有参构造第二种方式 -->
+    <bean id="hello_arg1" class="com.kuang.pojo.Hello_arg">
+        <constructor-arg name="str" value="Spring_arg1"/><!-- name="str" 表示属性名为str-->
+    </bean>
+
+    <alias name="hello" alias="hahaha"/> <!--这个标签是别名，给id=hello的取个别名hahaha，然后在程序中就可以使用hahaha获取bean-->
+    <!-- 本文件官方叫做applicationcontext.xml, 但是可以重命名为其他名字，比如beans.xml -->
+
+    <bean id = "hello1" class="com.kuang.pojo.Hello" name="hello2,hello3"><!--bean标签name测试：name也是别名，可用id和name来获取bean
+      所以alias标签并没有什么用
+    -->
+        <property name="str" value="Spring2"/>
+    </bean>
+</beans>
