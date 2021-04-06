@@ -1,0 +1,21 @@
+
+person:
+  name: zhoupan${random.uuid}
+  age: ${random.int}
+  happy: true
+  birth: 1996/01/22
+  maps: {k1: v1,k2: v2}
+  lists:
+    - code
+    - music
+    - girl
+  dog:
+    name: 旺财
+    age: 7
+
+dog1:
+  name: 旺财${person.hello:hello}
+  age: ${person.age:5}
+
+server:
+  port: 8083
