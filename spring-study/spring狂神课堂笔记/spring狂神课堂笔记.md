@@ -42,8 +42,7 @@ xml文件名可以随意起(官方叫做applicationcontext.xml)。
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     https://www.springframework.org/schema/beans/spring-beans.xsd">
-    
-
+ 
 </beans>
 
 ```
@@ -198,7 +197,7 @@ AOP：面向切面编程，spring中的动态代理
 
 </dependency>
 
-AOP两种实现方式：1.使用Spring的API接口 2.自定义类来实现AOP 3.使用注解方式
+AOP两种实现方式：1.使用Spring的API接口 2.自定义类来实现AOP  3.使用注解方式
 
  
 
@@ -447,11 +446,11 @@ delete 写成了deletes
 
 3、程序报错
 
-![image-20210301234707516](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210301234707516.png)
+![image-20210301234707516](spring狂神课堂笔记.assets/image-20210301234707516.png)
 
 4、数据库数据
 
-![image-20210301234735650](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210301234735650.png)
+![image-20210301234735650](spring狂神课堂笔记.assets/image-20210301234735650.png)
 
 发现虽然程序报错，但是数据还是添加到了数据库中。解决这种问题的方法就是用事务。
 

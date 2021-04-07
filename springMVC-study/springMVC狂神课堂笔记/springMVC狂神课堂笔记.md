@@ -91,7 +91,7 @@ vue框架中用的就是VM，原理就是双向绑定
 
 
 
-![image-20210303175037624](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210303175037624.png)
+![image-20210303175037624](springMVC狂神课堂笔记.assets/image-20210303175037624.png)
 
 在spring配置文件中的bean就须配置上图中关键步骤类的三个bean，如下：
 
@@ -273,7 +273,7 @@ Restful风格：https:localhost:8080/add/a/b
 
 
 
-![](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210303212054880.png)
+![](springMVC狂神课堂笔记.assets/image-20210303212054880.png)
 
 此外，如上图输入相同的链接，但是却能实现不同的功能，这主要是由于不同的功能是根据请求方法来确定的
 
@@ -332,7 +332,7 @@ GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE;
 
 ## 数据显示到前端：
 
-![image-20210303224847537](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210303224847537.png)
+![image-20210303224847537](springMVC狂神课堂笔记.assets/image-20210303224847537.png)
 
 
 
@@ -346,7 +346,7 @@ GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS,TRACE;
 
 3、提交的是一个对象（提交的都是一个对象中的属性值): 函数参数直接写对象类型即可（但是对象属性名和提交的参数名必须一致，不一致的话其对应属性值为null）
 
-![image-20210303225535157](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210303225535157.png)
+![image-20210303225535157](springMVC狂神课堂笔记.assets/image-20210303225535157.png)
 
 
 
@@ -458,7 +458,7 @@ json就是一种数据格式，与语言无关，可以在前后端之间使用j
 
 访问页面后，中文出现乱码：
 
-![image-20210304102148624](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210304102148624.png)
+![image-20210304102148624](springMVC狂神课堂笔记.assets/image-20210304102148624.png)
 
 @ResponseBody ：不会走视图解析器，直接向当前页面返回一个字符串。
 
@@ -483,7 +483,7 @@ json就是一种数据格式，与语言无关，可以在前后端之间使用j
 
 结果为：
 
-![image-20210304105228030](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210304105228030.png)
+![image-20210304105228030](springMVC狂神课堂笔记.assets/image-20210304105228030.png)
 
 可以看到两种方法输出的格式不一样。
 
@@ -533,11 +533,11 @@ fastjson使阿里开源的包，里面有很多静态方法，不需要创建对
 
 结果：
 
-![image-20210304113715826](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210304113715826.png)
+<img src="springMVC狂神课堂笔记.assets/image-20210304113715826.png" alt="image-20210304113715826" style="zoom: 67%;" />
 
 常用方法：
 
-![image-20210304113928170](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210304113928170.png)
+![image-20210304113928170](springMVC狂神课堂笔记.assets/image-20210304113928170.png)
 
 
 
@@ -568,7 +568,7 @@ fastjson使阿里开源的包，里面有很多静态方法，不需要创建对
     </mvc:annotation-driven>
 ```
 
-![image-20210304113215162](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210304113215162.png)
+<img src="springMVC狂神课堂笔记.assets/image-20210304113215162.png" alt="image-20210304113215162" style="zoom:67%;" />
 
 
 
@@ -620,7 +620,7 @@ fastjson使阿里开源的包，里面有很多静态方法，不需要创建对
 
 # SSM整合
 
-![image-20210304114502689](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210304114502689.png)
+![image-20210304114502689](springMVC狂神课堂笔记.assets/image-20210304114502689.png)
 
 ## Mybatis整合
 
@@ -806,9 +806,9 @@ bean是自己写的拦截类，path是要拦截的请求路径，/**表示路径
 
 把登录信息存在HttpSession中，这个对象和存活一段时间，其他的方式不行。例子如下：
 
-![image-20210305224540175](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210305224540175.png)
+![image-20210305224540175](springMVC狂神课堂笔记.assets/image-20210305224540175.png)
 
-![image-20210305225037538](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210305225037538.png)
+![image-20210305225037538](springMVC狂神课堂笔记.assets/image-20210305225037538.png)
 
 登陆时保存信息到session中。
 

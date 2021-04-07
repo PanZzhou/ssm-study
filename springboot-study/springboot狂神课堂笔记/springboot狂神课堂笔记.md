@@ -1,4 +1,4 @@
-<img src="C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210307170124565.png" alt="image-20210307170124565" style="zoom:50%;" />
+<img src="springboot狂神课堂笔记.assets/image-20210307170124565.png" alt="image-20210307170124565" style="zoom:50%;" />
 
 
 
@@ -8,7 +8,7 @@ mvc-->mvvm-->微服务架构
 
 把三层架构中的服务分成小模块，小模块分布在不同主机上，这些小模块就叫微服务。架构演变如下：
 
-<img src="C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210307172013103.png" alt="image-20210307172013103" style="zoom:50%;" />
+<img src="springboot狂神课堂笔记.assets/image-20210307172013103.png" alt="image-20210307172013103" style="zoom:50%;" />
 
 微服务之间可以通过http或rpc实现
 
@@ -22,7 +22,7 @@ mvc-->mvvm-->微服务架构
 
 打jar包后运行过程：
 
-<img src="C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210307180724182.png" alt="image-20210307180724182" style="zoom:50%;" />
+<img src="springboot狂神课堂笔记.assets/image-20210307180724182.png" alt="image-20210307180724182" style="zoom:50%;" />
 
 之后会在target目录下生成对应jar包，在cmd中运行 java -jar jar包名    之后这个微服务就在主机上布置起来了；如果有Controller接口，在浏览器数据对应地址就可以访问这个Controller了
 
@@ -87,7 +87,7 @@ pom.xml:
 
 - META-INF/spring.factories：自动配置的核心文件
 
-  <img src="C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210307205851437.png" alt="image-20210307205851437" style="zoom:50%;" />
+  <img src="springboot狂神课堂笔记.assets/image-20210307205851437.png" alt="image-20210307205851437" style="zoom:50%;" />
 
 - <img src="C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210307212047185.png" alt="image-20210307212047185" style="zoom:50%;" />
 
@@ -95,7 +95,7 @@ pom.xml:
 
 # 启动
 
-<img src="C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210308151854766.png" alt="image-20210308151854766" style="zoom: 80%;" />
+<img src="springboot狂神课堂笔记.assets/image-20210308151854766.png" alt="image-20210308151854766" style="zoom: 80%;" />
 
 # springboot配置
 
@@ -103,7 +103,7 @@ pom.xml:
 
 1. 把默认配置文件application.properties改成application.yaml(yml), 后者也是一种配置文件。
 
-2. <img src="C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210308153631378.png" alt="image-20210308153631378" style="zoom:50%;" />
+2. <img src="springboot狂神课堂笔记.assets/image-20210308153631378.png" alt="image-20210308153631378" style="zoom:50%;" />
 
 3. yaml可以存一个对象(注意key和value之间要有空格)
 
@@ -168,7 +168,7 @@ ${person.hello:hello}表示如果person.hello存在，就使用它；不存在�
 
 一次给每个属性加@Value也可以达到这种注入属性的效果，但是没有这个简便和强大
 
-<img src="C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210308163021601.png" alt="image-20210308163021601" style="zoom: 67%;" />
+<img src="springboot狂神课堂笔记.assets/image-20210308163021601.png" alt="image-20210308163021601" style="zoom: 67%;" />
 
 ## JSR303数据校验
 
@@ -202,7 +202,7 @@ public class Person {
 
 其他数据限制如下：
 
-![img](https://upload-images.jianshu.io/upload_images/3145530-8ae74d19e6c65b4c?imageMogr2/auto-orient/strip|imageView2/2/format/webp)
+![img](springboot狂神课堂笔记.assets/3145530-8ae74d19e6c65b4c)
 
 ## 多配置文件
 
@@ -212,7 +212,7 @@ file表示项目的根目录  classpath表示的是resource目录下。
 
 这几个路径的yaml配置文件优先级是递减的。
 
-<img src="C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210308170403744.png" alt="image-20210308170403744" style="zoom:50%;" />
+<img src="springboot狂神课堂笔记.assets/image-20210308170403744.png" alt="image-20210308170403744" style="zoom:50%;" />
 
 ## 多环境生产：
 
@@ -382,9 +382,9 @@ html文件中引用样式等操作：
 
 就是中英文切换，适配
 
-![image-20210330193107671](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210330193107671.png)
+![image-20210330193107671](springboot狂神课堂笔记.assets/image-20210330193107671.png)
 
-<img src="C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210330193128984.png" alt="image-20210330193128984" style="zoom:50%;" />
+<img src="springboot狂神课堂笔记.assets/image-20210330193128984.png" alt="image-20210330193128984" style="zoom:50%;" />
 
 在核心配置文件中配置message类的属性，绑定到上面我们添加的login配置文件上
 
@@ -707,7 +707,7 @@ spring.mvc.date-format=yyyy-MM-dd
 
 网站基本开发步骤：
 
-![image-20210401165334431](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210401165334431.png)
+![image-20210401165334431](springboot狂神课堂笔记.assets/image-20210401165334431.png)
 
 ## 后台
 
@@ -1199,9 +1199,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 从代码层面看Shiro：
 
-![image-20210404174137670](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210404174137670.png)
+![image-20210404174137670](springboot狂神课堂笔记.assets/image-20210404174137670.png)
 
-![image-20210404174259387](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210404174259387.png)
+![image-20210404174259387](springboot狂神课堂笔记.assets/image-20210404174259387.png)
 
 ## QuickStart
 
@@ -1571,7 +1571,7 @@ public class SwaggerConfig {
 
 ```
 
-<img src="C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210405162411603.png" alt="image-20210405162411603" style="zoom:50%;" />
+<img src="springboot狂神课堂笔记.assets/image-20210405162411603.png" alt="image-20210405162411603" style="zoom:50%;" />
 
 上面红框内的相关信息就是在config类中配置的。
 
@@ -1615,7 +1615,7 @@ return new Docket(DocumentationType.SWAGGER_2)
 
 配置prod，dev环境
 
-![image-20210405171203218](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210405171203218.png)
+![image-20210405171203218](springboot狂神课堂笔记.assets/image-20210405171203218.png)
 
 在application.properties中配置当前选择的环境为prod：
 
@@ -1657,7 +1657,7 @@ environmen中包含我们在application.properties中设置的生产环境信息
 
 通过配置多个Docket的bean来实现。
 
-<img src="C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210405172618496.png" alt="image-20210405172618496" style="zoom:50%;" />
+<img src="springboot狂神课堂笔记.assets/image-20210405172618496.png" alt="image-20210405172618496" style="zoom:50%;" />
 
 红线部分就是设置的而不同分组，通过选择不同分组来显示各自的swagger信息
 
@@ -1684,7 +1684,7 @@ public class User {
 
 只要接口中返回值中存在实体类，他就会被自动扫描到swagger中
 
-![image-20210405174308019](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210405174308019.png)
+![image-20210405174308019](springboot狂神课堂笔记.assets/image-20210405174308019.png)
 
 ### 注解
 
@@ -1696,9 +1696,9 @@ public class User {
   - @ApiOperation("helllo控制类")：放在接口方法上，描述此请求的用途
   - @ApiParam("用户名")：放在接口方法的参数前，描述此参数的具体信息是啥
 
-![image-20210405174508939](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210405174508939.png)
+![image-20210405174508939](springboot狂神课堂笔记.assets/image-20210405174508939.png)
 
-<img src="C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210405175109197.png" alt="image-20210405175109197" style="zoom: 67%;" />
+<img src="springboot狂神课堂笔记.assets/image-20210405175109197.png" alt="image-20210405175109197" style="zoom: 67%;" />
 
 注意：在正式发布项目时，关闭swagger！
 
@@ -1895,7 +1895,7 @@ spring.redis.port=6379
 
   
 
-  <img src="C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210406162108943.png" alt="image-20210406162108943" style="zoom:50%;" />
+  <img src="springboot狂神课堂笔记.assets/image-20210406162108943.png" alt="image-20210406162108943" style="zoom:50%;" />
 
 springboot中自定义的redis相关的序列化方式如上图：有jdk，jackson等多种方式。
 
@@ -1910,7 +1910,7 @@ springboot中自定义的redis相关的序列化方式如上图：有jdk，jacks
 - 通信
 - 序列化：数据传输需要转换
 
-<img src="C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210406180003271.png" alt="image-20210406180003271" style="zoom:150%;" />
+<img src="springboot狂神课堂笔记.assets/image-20210406180003271.png" alt="image-20210406180003271" style="zoom:150%;" />
 
 zookeeper是Dubbo是用来当作注册中心的。
 
@@ -2037,7 +2037,7 @@ java -jar dubbo-admin-0.0.1-SNAPSHOT.jar
 http://localhost:7001/
 ```
 
-![image-20210406211638227](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210406211638227.png)
+![image-20210406211638227](springboot狂神课堂笔记.assets/image-20210406211638227.png)
 
 这里就可以看到我们自动注册到zookeeper的服务了。
 
@@ -2087,7 +2087,55 @@ dubbo.registry.address=zookeeper://127.0.0.1:2181
     }
 ```
 
-![image-20210406214107863](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210406214107863.png)
+![image-20210406214107863](springboot狂神课堂笔记.assets/image-20210406214107863.png)
 
 成功拿到服务运行结果。
 
+## 聊聊微服务
+
+原来的架构是，所有的服务模块都在一个项目里，并且所有种类的服务都运行在同一个服务器上；当用户数量多时，单个服务器不足以应付所有请求，这时候可以横向的添加服务器，这些服务器仍然运行所有种类的服务。这时候可能需要负载均衡来协调服务器资源。当用户数量继续增加时，有的服务模块可能占用很大的服务器资源，而另一些占用很少一部分服务器资源，这时候我们可以把各个服务模块拆分成不同项目，分别运行在不同服务器上，充分发挥每种服务的最大效率。这就是微服务的来源。
+
+ 
+
+<img src="springboot狂神课堂笔记.assets/未命名文件.jpg" alt="未命名文件" style="zoom:50%;" />
+
+传统架构如上所示。
+
+<img src="springboot狂神课堂笔记.assets/未命名文件 (1).jpg" alt="未命名文件 (1)" style="zoom:50%;" />
+
+微服务架构。
+
+微服务架构面临的四个核心问题：
+
+- 这么多服务，客户端该如何去访问？Api网关
+- 这么多服务，服务之间如何进行通信？涉及防火墙和安全性问题
+- 这么多服务，如何统一治理服务？统一的服务管理平台
+- 服务挂了，怎么办？熔断(服务降级)
+
+解决方案：
+
+​    springcloud，是一套生态，就是来解决以上分布式架构的4个问题的。
+
+第一套：spring cloud netflix出来的一套解决方案如下：
+
+- Api网关，zuul组件
+- Feign -->httpClient --> http的通信方式，同步阻塞
+- 服务注册与发现，Eureka
+- 熔断机制，Hystrix
+
+第二套：Apache Dubbo Zookeeper，不完善
+
+-  Api网关：没有！ 要么找第三方组件，要么自己实现
+- Dubbo，Rpc通信框架
+- 服务注册与发现：zookeeper
+- 熔断：没有，借助了Hystrix
+
+第三套：Spring Cloud Alibaba 一站式解决方案
+
+
+
+目前，又提出了一种方案：
+
+**服务网格**：下一代微服务标准，Server Mesh
+
+代表解决方案：istio

@@ -475,7 +475,7 @@ Mybatis 默认的事务管理器是JDBC；数据源连接池是POOLED
 
  这些属性可以在外部进行配置，并可以进行动态替换。你既可以在典型的 Java 属性文件中配置这些属性，也可以在 properties 元素的子元素中设置 
 
-![1611990981692](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\1611990981692.png)
+![1611990981692](Mybatis狂神课堂笔记.assets/1611990981692.png)
 
 编写一个配置文件：db.properties
 
@@ -596,7 +596,7 @@ SqlSession
 
 数据库中的字段：
 
-![1612170503773](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\1612170503773.png)
+![1612170503773](Mybatis狂神课堂笔记.assets/1612170503773.png)
 
 新建一个项目，拷贝之前的，测试实体类字段不一致的情况：
 
@@ -611,7 +611,7 @@ public class User {
 
 测试出现问题：
 
-![1614249471871](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\1614249471871.png)
+![1614249471871](Mybatis狂神课堂笔记.assets/1614249471871.png)
 
 数据库中是pwd字段，而实体类是password字段，对应不上。
 
@@ -661,7 +661,7 @@ id name password
 
 现在：日志工厂！
 
-![1614251720081](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\1614251720081.png)
+![1614251720081](Mybatis狂神课堂笔记.assets/1614251720081.png)
 
  SLF4J 、LOG4J  和 STDOUT_LOGGING（标准日志输出） 比较常用，需要掌握
 
@@ -673,7 +673,7 @@ mybatis中具体使用哪一个日志实现，在设置中设定！
     </settings>
 ```
 
-![1614252307658](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\1614252307658.png)
+![1614252307658](Mybatis狂神课堂笔记.assets/1614252307658.png)
 
 ```xml
     <settings>
@@ -1411,7 +1411,7 @@ open="(" separator="or" close=")">
  </foreach>
 ```
 
-![image-20210228220232261](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210228220232261.png)
+![image-20210228220232261](Mybatis狂神课堂笔记.assets/image-20210228220232261.png)
 
 
 
@@ -1462,7 +1462,7 @@ Mybatis系统默认定义了两种缓存：**一级缓存和二级缓存**
 
 3.查看日志输出
 
-![image-20210228233451291](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210228233451291.png)
+![image-20210228233451291](Mybatis狂神课堂笔记.assets/image-20210228233451291.png)
 
 可以看到两次查询只创建了一次connection，第二次查询的时候直接返回缓存里的数据
 
@@ -1492,7 +1492,7 @@ Mybatis系统默认定义了两种缓存：**一级缓存和二级缓存**
 
 结果为
 
-![image-20210228234526376](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210228234526376.png)
+![image-20210228234526376](Mybatis狂神课堂笔记.assets/image-20210228234526376.png)
 
 可以看到最后结果为false，并且两次查询都构造了sql语句从数据库中查询数据
 
@@ -1585,7 +1585,7 @@ Mybatis系统默认定义了两种缓存：**一级缓存和二级缓存**
 
 - 结果如下
 
-  ![image-20210301134619155](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210301134619155.png)
+  ![image-20210301134619155](Mybatis狂神课堂笔记.assets/image-20210301134619155.png)
 
 可以看到，第一个会话关闭后，第二个会话去取相同的数据会缓存击中，直接从缓存中读取出相同的数据。第二次查询数据不在缓存中，会生成新的sql语句重新查询出数据。
 
@@ -1593,7 +1593,7 @@ Mybatis系统默认定义了两种缓存：**一级缓存和二级缓存**
 
 ## 13.4 缓存原理
 
-![image-20210301135033094](C:\Users\FlameZ\AppData\Roaming\Typora\typora-user-images\image-20210301135033094.png)
+![image-20210301135033094](Mybatis狂神课堂笔记.assets/image-20210301135033094.png)
 
 
 
