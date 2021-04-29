@@ -1266,3 +1266,7 @@ tips：
 
 - github上可以在线修改配置文件！
 - 修改了配置文件之后，Config Server得到的数据就已经改变，但是Config Client的配置信息还未更新。需要热部署重新配置信息，通过点击build-》build module(对应模块名字)即可完成部署，从而使配置生效！
+
+# 整体知识点结构
+
+<img src="SpringCloud狂神笔记.assets/image-20210429203300865.png" alt="image-20210429203300865" style="zoom: 80%;" />
