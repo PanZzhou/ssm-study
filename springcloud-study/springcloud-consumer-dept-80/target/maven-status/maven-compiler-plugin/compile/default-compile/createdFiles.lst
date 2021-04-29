@@ -1,0 +1,5 @@
+com\kuang\springcloud\config\ConfigBean.class
+com\kuang\springcloud\DeptConsumer.class
+com\kuang\myrule\KuangRule.class
+com\kuang\myrule\KuangRandomRule.class
+com\kuang\springcloud\controller\DeptConsumerController.class

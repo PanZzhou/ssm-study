@@ -1,0 +1,4 @@
+com\kuang\springcloud\service\DeptClientService.class
+com\kuang\springcloud\pojo\Dept.class
+com\kuang\springcloud\service\DeptClientServiceFallbackFactory.class
+com\kuang\springcloud\service\DeptClientServiceFallbackFactory$1.class

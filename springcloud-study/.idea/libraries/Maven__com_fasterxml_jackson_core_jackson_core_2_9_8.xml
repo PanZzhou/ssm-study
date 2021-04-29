@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.8">
+    <ANNOTATIONS>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/externalAnnotations/com/fasterxml/jackson/core/jackson-core/2.9.6-an1/jackson-core-2.9.6-an1-annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../env/apache-maven-3.6.3/repository/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../env/apache-maven-3.6.3/repository/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../env/apache-maven-3.6.3/repository/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

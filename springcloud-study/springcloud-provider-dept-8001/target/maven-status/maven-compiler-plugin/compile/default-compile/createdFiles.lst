@@ -1,0 +1,5 @@
+com\kuang\springcloud\service\DeptService.class
+com\kuang\springcloud\DeptProvider_8001.class
+com\kuang\springcloud\controller\DeptController.class
+com\kuang\springcloud\service\DeptServiceImpl.class
+com\kuang\springcloud\mapper\DeptMapper.class

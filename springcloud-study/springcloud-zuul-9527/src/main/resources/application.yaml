@@ -1,0 +1,21 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: springcloud-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7001.com:7001/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: zuul9527
+    prefer-ip-address: true
+info:
+  app.name: kuang-springcloud
+  company.name: www.kuangstudy.com
+zuul:
+  routes:
+    mydept.serviceId: springcloud-provider-dept #服务名
+    mydept.path: /mydept/**  #使用这个代替服务名，这样在访问路劲中就可以不再使用服务名了
+  ignored-services: springcloud-provider-dept  #上面两个都可以访问，这个就禁止使用服务名访问了, 一般使用通配符 “*”
+#  prefix: /kuang   #设置访问路径公共前缀
