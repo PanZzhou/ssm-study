@@ -1,0 +1,5 @@
+com\kuang\handler\MyHandler.class
+com\kuang\MybatisPlusApplication.class
+com\kuang\config\MyBatisPlusConfig.class
+com\kuang\mapper\UserMapper.class
+com\kuang\pojo\User.class

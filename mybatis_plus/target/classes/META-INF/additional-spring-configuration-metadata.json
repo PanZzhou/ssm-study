@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "mybatis-plus.global-config.db-config.logic-delete-field",
+      "type": "java.lang.String",
+      "description": "Description for mybatis-plus.global-config.db-config.logic-delete-field."
+  }
+] }
