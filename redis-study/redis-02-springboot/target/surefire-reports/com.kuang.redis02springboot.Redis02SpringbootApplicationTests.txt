@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.kuang.redis02springboot.Redis02SpringbootApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 63.684 s <<< FAILURE! - in com.kuang.redis02springboot.Redis02SpringbootApplicationTests
+contextLoads  Time elapsed: 60.982 s  <<< ERROR!
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379
+	at com.kuang.redis02springboot.Redis02SpringbootApplicationTests.contextLoads(Redis02SpringbootApplicationTests.java:28)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379
+	at com.kuang.redis02springboot.Redis02SpringbootApplicationTests.contextLoads(Redis02SpringbootApplicationTests.java:28)
+Caused by: io.lettuce.core.RedisCommandTimeoutException: Connection initialization timed out. Command timed out after 1 minute(s)
+
